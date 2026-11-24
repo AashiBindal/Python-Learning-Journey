@@ -1,0 +1,67 @@
+#sets
+s=set()
+print(s)
+print(type(s))
+#1d 2d
+s1={1,2,3}
+print(s1)
+#2d
+#s2={1,2,{3}}
+#print(s2)
+
+#homo hetro
+s={1,1,4,5,5}
+S={1,1.3,'hi' , True} #true=1
+print(s,S)
+#using type convertion
+a=set([1,2,3])
+print(a)
+#duplicates not allowed
+d={1,2,1,2,11,1}
+print(d)
+#unorderd
+s1={1,2,4}
+s2={2,4,1}
+print(s1==s2)
+#accessing items are not allowed
+#indexing X
+#slicing X
+#editing X
+#adding and deleting
+#add
+s={1,2,3 ,5}
+s.add(4)
+print(s)
+#update
+s={1,2,3 ,5}
+s.update([6,7,8])
+print (s)
+#DELETING ITEMS
+#del
+#x={1,2}
+#del(x)
+#print(x)
+
+#discard->error show nhi hoga if item present nhi h
+s={1,2,3 ,5}
+s.discard(5)
+print(s)
+#remove->error show hogaa if item present nahi h to
+s={1,2,3 ,5}
+s.remove(2)
+print(s)
+#pop->dlt random item
+s={1,2,3 ,5}
+print(s.pop())
+#clear->empty
+s={1,2,3 ,5}
+print(s.clear())
+#--------------------------------------------------
+#--------------------------------------------------
+#operations on sets
+#union
+#intersection
+#differnce
+#symmetric diff
+#membership test
+#iteration
