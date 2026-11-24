@@ -1,7 +1,6 @@
-l = [1,2,3,4,5]
-for i in l :
-    print(i)
-#Index-wise 
-l = [1,2,3,4,5] 
-for i in range(0,len(l)):
-    print(i)
+print(t3)
+print(t3[2])
+print(t3[-1])
+#slicing
+print(t3[0:3])
+print(t5[-1][0])

@@ -1,8 +1,18 @@
+# TUPLES 
+
+# A tuple in Python is similar to a list. The difference between the two is that we cannot change 
+#  The elements of a tuple, once it is assigned, whereas we can change the elements of a list 
+
+# A tuple is an immutable list. A tuple cannot be changed in any way  once it is created. 
+
+# Characteristics 
+# Ordered, unchangeable, allow duplicates. 
+
 #creating tuples
 #empty
 t1=()
 print(t1)
-#single item
+#Create a tuple with a  single item
 t2=('123',)
 print(type(t2))
 print(t2)
