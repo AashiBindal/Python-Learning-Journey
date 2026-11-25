@@ -31,6 +31,7 @@ print(t6)
 #--------------------------------------.
 #accessing items
 #indexing
+t3=(1,2,3,4)
 print(t3)
 print(t3[2])
 print(t3[-1])
@@ -45,6 +46,7 @@ t7=(1)
 del(t7)
 #---------------------------------------
 #operations 
+
 #arithmetic
 t1=(1,2)
 t2=(2,3)
