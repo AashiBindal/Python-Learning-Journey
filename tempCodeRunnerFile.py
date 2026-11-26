@@ -1,1 +1,7 @@
-print({i:{j:i*j for j in range(1,11)} for i in range(2,5)})
+
+def display (**kwargs):
+
+   for (key,value) in kwargs.items():
+      print  (key , '->' , value)
+
+display(india = 'delhi' , srilanka = 'colombo' , nepal = 'kathmandu' , pakistan = 'islamabad')               
