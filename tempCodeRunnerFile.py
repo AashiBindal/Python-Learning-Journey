@@ -1,53 +1,51 @@
+class BankAccount :
 
-# fraction datatype 
+    def __init__(self,accountNumber,name,balance):
+        self.accountNumber = accountNumber
+        self.name       = name   
+        self.balance    = balance
 
-class Fraction :
-     #parameterized constructor 
-     def __init__(self,x,y):
-          self.num = x
-          self.den = y
-
-     def __str__(self):
-          return  '{}/{}'.format(self.num , self.den)
-
-     def __add__(self , other ):
-        new_num = self.num*other.den + other.num*self.den
-        new_den = self.den*other.den
-
-        return  '{}/{}'.format(new_num , new_den)
-     
-
-     def __sub__(self,other):
-       new_num = self.num*other.den - other.num*self.den
-       new_den = self.den*other.den
-     
-       return  '{}/{}'.format(new_num , new_den)
-     
-
-     def __mul__(self,other):
-       new_num = self.num*other.num
-       new_den = self.den*other.den
-     
-       return  '{}/{}'.format(new_num , new_den) 
+    def Deposit(self):
+        self.deposit = int(input('enter amount : '))
+        self.balance = self.deposit + self.balance  
+        return self.balance 
 
 
-     def __truediv__(self,other):
-       new_num = self.num*other.den 
-       new_den = self.den*other.num
-     
-       return  '{}/{}'.format(new_num , new_den)
+    def Withdrawl(self):
+         self.withdrawl = int(input('enter amount : '))
+         if 0 < self.withdrawl <= self.balance :
+           self.balance = self.balance - self.withdrawl 
+           return self.balance
+         
+         else :
+             print("insufficient balance !!") 
+    
+    
+    def BankFees(self):
+        self.Bankfees = self.balance*0.05
+        self.balance = self.balance - self.Bankfees
+        return self.balance
+    
 
-     def convert_to_decimal(self):
-      return self.num/self.den
-     
-fr1 = Fraction(8,4)
-fr2 = Fraction(1,2)
-print(fr1)
-print(fr2)          
-print(fr1 + fr2)
-print(fr1 - fr2)
-print(fr1 * fr2)
-print(fr1 / fr2)
-print(fr1.convert_to_decimal())
+    def Display(self):
+         print('your account number : ' , self.accountNumber)    
+         print('your name : ' , self.name)
+         print('total balance : ' ,self.balance)
 
+accountNumber = int(input('enter your account number : '))    
+name          = input('enter your name : ')
+balance       = int(input('enter balance : '))
+
+
+obj = BankAccount(accountNumber,name,balance)
+obj.Display()
+
+obj.Deposit()
+obj.Display()
+
+obj.Withdrawl()
+obj.Display()
+
+obj.BankFees()
+obj.Display()
 
